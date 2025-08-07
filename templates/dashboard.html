@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retinopathy Prediction</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Retinopathy Prediction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="{{ url_for('login') }}">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <h1>Diabetic Retinopathy Prediction using Fast-RCNN Classification</h1>
+            <button class="btn btn-outline-light mt-3" onclick="scrollToAbstract()">ABSTRACT</button>
+        </div>
+    </header>
+
+    <!-- Abstract Section -->
+    <section id="abstract-section">
+        <div class="container">
+            <h2>Abstract</h2>
+            <p>
+                Diabetic retinopathy is a leading cause of blindness, and early detection is crucial for preventing severe complications. 
+                Our platform uses a Fast-RCNN-based deep learning model to analyze retinal images and detect the presence of diabetic retinopathy in real-time.
+                The system allows users to upload fundus images, processes them using CNN-based classification, and provides a risk assessment for diabetic retinopathy.
+                This tool aims to assist ophthalmologists and healthcare professionals in making informed decisions for early diagnosis and treatment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scroll Function -->
+    <script>
+        function scrollToAbstract() {
+            document.getElementById("abstract-section").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
+
+

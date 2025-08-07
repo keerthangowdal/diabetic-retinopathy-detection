@@ -1,0 +1,314 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ba8686;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar styles */
+.navbar {
+    background: #007bff;
+    color: white;
+    width: 100%;
+    padding: 20px 0; /* Increased height */
+    margin-top: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background: darkred;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-image: url("../images/db-bg.jpg") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-left: 80px; /* Move heading and button to the left */
+    color: white;
+}
+
+/* Overlay for better text visibility */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Hero Text */
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 80px;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Abstract Button */
+.hero-section .btn {
+    text-align: center;
+    font-size: 48px;
+    border-color: #c6a45b;
+    color: #c6a45b;
+    margin-top: 20px;
+}
+
+/* Abstract Section */
+#abstract-section {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: white;
+    padding: 50px;
+    font: 150px;
+    text-align: center;
+}
+
+#abstract-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+#abstract-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section {
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #abstract-section p {
+        max-width: 100%;
+    }
+}
+
+/* Fullscreen Background */
+.login-body {
+    background: url("../images/login-bg.jpg") no-repeat center center/cover !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Glassmorphism Effect */
+.login-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    color: white;
+}
+
+/* Form Styling */
+.login-card .form-label {
+    font-weight: bold;
+}
+
+.login-card .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+}
+
+.login-card .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-card .btn-primary {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-card .btn-primary:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.login-card a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-card a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    .login-card {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Fullscreen Background */
+.register-body {
+    background: url("../images/login-bg.jpg") no-repeat center center/cover !important;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Register Container */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Glassmorphism Effect */
+.register-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    color: white;
+}
+
+/* Form Styling */
+.register-card .form-label {
+    font-weight: bold;
+}
+
+.register-card .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+}
+
+.register-card .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.register-card .btn-primary {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.register-card .btn-primary:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+/* Link Styling */
+.register-card a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-card a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    .register-card {
+        width: 90%;
+        padding: 20px;
+    }
+}
